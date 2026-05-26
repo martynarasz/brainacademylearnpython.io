@@ -1,0 +1,14 @@
+<svg width="120" height="120" viewBox="0 0 120 120" class="unlock-animation" role="img" aria-label="Unlock icon"><defs>
+        <linearGradient id="unlockGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+         <stop offset="0%" style="stop-color:#fbbf24"></stop>
+         <stop offset="100%" style="stop-color:#d97706"></stop>
+        </linearGradient>
+        <filter id="unlockGlow">
+         <feGaussianBlur stdDeviation="2" result="coloredBlur"></feGaussianBlur>
+         <feMerge>
+          <feMergeNode in="coloredBlur"></feMergeNode>
+          <feMergeNode in="SourceGraphic"></feMergeNode>
+         </feMerge>
+        </filter>
+       </defs> <!-- Lock body --> <rect x="40" y="55" width="40" height="35" rx="5" fill="url(#unlockGradient)" filter="url(#unlockGlow)"></rect> <!-- Shackle (open) --> <path d="M45 55 L45 35 Q45 20 60 20 Q75 20 75 35 L75 45" fill="none" stroke="#fbbf24" stroke-width="6" stroke-linecap="round" filter="url(#unlockGlow)"></path> <!-- Keyhole --> <circle cx="60" cy="70" r="5" fill="#92400e"></circle> <rect x="57" y="70" width="6" height="12" rx="1" fill="#92400e"></rect> <!-- Shine effect --> <path d="M50 60 L52 62" stroke="#fef3c7" stroke-width="2" stroke-linecap="round" opacity="0.8"></path> <path d="M55 58 L57 60" stroke="#fef3c7" stroke-width="2" stroke-linecap="round" opacity="0.8"></path> <!-- Sparkles --> <circle cx="30" cy="40" r="2" fill="#fbbf24" style="animation: sparkle 1.5s infinite"></circle> <circle cx="90" cy="50" r="2.5" fill="#fcd34d" style="animation: sparkle 2s infinite 0.3s"></circle> <circle cx="85" cy="75" r="2" fill="#fbbf24" style="animation: sparkle 1.8s infinite 0.6s"></circle>
+      </svg>
