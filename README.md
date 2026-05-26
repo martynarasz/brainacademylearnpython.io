@@ -14,11 +14,13 @@ Statyczna strona kampanii przygotowana pod GitHub Pages.
 |  |- js/
 |  |  |- main.js
 |  |- img/
-|     |- brain.png
-|     |- codey.png
 |     |- icon-512.png
 |     |- island-unlocked.svg
 |     |- rocket.svg
+|     |- screen-codie.png
+|     |- screen-puzzle.png
+|     |- screen-streak.png
+|     |- tlo.png
 |     |- unlock.svg
 ```
 
