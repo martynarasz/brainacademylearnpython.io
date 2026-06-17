@@ -1,4 +1,3 @@
-
 const menuToggle = document.getElementById("menu-toggle");
 const siteNav = document.getElementById("site-nav");
 const yearEl = document.getElementById("year");
@@ -23,8 +22,8 @@ const translations = {
     "nav.screens": "Ekrany",
     "nav.play": "Google Play",
 
-    "hero.eyebrow": "Przygoda z nauką Pythona",
-    "hero.title": "Wyrusz w koderską przygodę.",
+    "hero.eyebrow": "Przygoda z Pythonem, trening logiki",
+    "hero.title": "Myśl jak programista.",
     "hero.lead":
       "Odkrywaj tajemnicze wyspy, rozwiązuj krótkie zadania Python i trenuj logikę z Codie.",
     "hero.primaryCta": "Pobierz z Google Play",
@@ -32,6 +31,7 @@ const translations = {
     "hero.stat1": "Logiczne zagadki",
     "hero.stat2": "Codzienne misje",
     "hero.stat3": "Odblokowywane wyspy",
+
     "hero.screensAria": "Zrzuty ekranu aplikacji CodeBrain",
     "hero.phoneMainAlt": "Ekran zagadki kodowania CodeBrain",
     "hero.phoneBackAlt": "Ekran przygody z Codie",
@@ -40,6 +40,7 @@ const translations = {
     "adventure.title": "Ucz się przez odkrywanie, a nie przez wkuwanie.",
     "adventure.lead":
       "CodeBrain zmienia zasady nauki kodowania: zamiast samej składni trenuj logikę. Każde zadanie rozwija myślenie, a każda wyspa przybliża Cię do myślenia jak programista.",
+
     "adventure.card1Title": "Podążaj za Codie",
     "adventure.card1Text":
       "Twój towarzysz prowadzi Cię przez wyzwania, podpowiedzi i małe zwycięstwa.",
@@ -54,6 +55,7 @@ const translations = {
     "islands.title": "Odblokowuj i eksploruj nowe wyspy kodowania.",
     "islands.lead":
       "Każda wyspa wprowadza nową umiejętność Pythona. Ucz się przez odkrywanie, rozwiązuj wyzwania i idź dalej misja po misji.",
+
     "islands.card1Alt": "Wyspa Pythona",
     "islands.card1Label": "Trenuj pamięć",
     "islands.card2Alt": "Wyspa kodowania",
@@ -65,6 +67,7 @@ const translations = {
     "logic.title": "Zrozum kod zamiast zapamiętywać samą składnię.",
     "logic.lead":
       "CodeBrain zamienia Pythona w małe, interaktywne decyzje: wybierz poprawną linię, odblokuj bloki i uruchom rozwiązanie.",
+
     "logic.feature1": "Interaktywne zagadki kodowania",
     "logic.feature2": "Ćwicz logikę z Pythonem krok po kroku",
     "logic.feature3": "Codzienne serie i postępy",
@@ -102,8 +105,8 @@ const translations = {
     "nav.screens": "Screens",
     "nav.play": "Google Play",
 
-    "hero.eyebrow": "Python learning adventure",
-    "hero.title": "Start your coding adventure.",
+    "hero.eyebrow": "Python adventure, logic training",
+    "hero.title": "Think like a programmer.",
     "hero.lead":
       "Explore mysterious islands, solve short Python tasks and train your logic with Codie.",
     "hero.primaryCta": "Get it on Google Play",
@@ -111,6 +114,7 @@ const translations = {
     "hero.stat1": "Logic puzzles",
     "hero.stat2": "Daily quests",
     "hero.stat3": "Unlockable islands",
+
     "hero.screensAria": "CodeBrain app screenshots",
     "hero.phoneMainAlt": "CodeBrain coding puzzle screen",
     "hero.phoneBackAlt": "Codie adventure screen",
@@ -119,6 +123,7 @@ const translations = {
     "adventure.title": "Learn by exploring, not by memorizing.",
     "adventure.lead":
       "CodeBrain changes the way you learn coding: instead of memorizing syntax, you train logic. Every task develops your thinking, and every island brings you closer to thinking like a programmer.",
+
     "adventure.card1Title": "Follow Codie",
     "adventure.card1Text":
       "Your companion guides you through challenges, hints and small wins.",
@@ -133,6 +138,7 @@ const translations = {
     "islands.title": "Unlock and explore new coding islands.",
     "islands.lead":
       "Every island introduces a new Python skill. Learn through exploration, solve challenges and keep moving forward one quest at a time.",
+
     "islands.card1Alt": "Python island",
     "islands.card1Label": "Train memory",
     "islands.card2Alt": "Coding island",
@@ -144,6 +150,7 @@ const translations = {
     "logic.title": "Understand code instead of just memorizing syntax.",
     "logic.lead":
       "CodeBrain turns Python into small interactive decisions: choose the correct line, unlock blocks and run your solution.",
+
     "logic.feature1": "Interactive coding puzzles",
     "logic.feature2": "Practice logic with Python step by step",
     "logic.feature3": "Daily streaks and progress",
@@ -172,6 +179,7 @@ if (yearEl) {
 
 const setLanguage = (language) => {
   const dictionary = translations[language] || translations.en;
+
   document.documentElement.lang = language;
 
   i18nNodes.forEach((node) => {
@@ -201,6 +209,7 @@ const setLanguage = (language) => {
 
   langButtons.forEach((button) => {
     const isActive = button.dataset.lang === language;
+
     button.classList.toggle("active", isActive);
     button.setAttribute("aria-pressed", isActive ? "true" : "false");
   });
@@ -208,13 +217,14 @@ const setLanguage = (language) => {
   try {
     localStorage.setItem("codebrain-language", language);
   } catch (error) {
-    // Ignore storage failures, for example in private browsing mode.
+    // Ignore storage failures.
   }
 };
 
 if (menuToggle && siteNav) {
   menuToggle.addEventListener("click", () => {
     const isOpen = siteNav.classList.toggle("open");
+
     menuToggle.setAttribute("aria-expanded", isOpen ? "true" : "false");
   });
 
@@ -249,4 +259,3 @@ try {
 }
 
 setLanguage(initialLanguage);
-
